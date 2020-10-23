@@ -1,0 +1,27 @@
+I was thinking about a solution to the problems with rep systems like steemit/reddit/governance/etc and think this would work...
+I imagine you could crate fully trusted anonymous sybil/money influence proof reddit-like platform using this to sign vote tx...
+
+Basically the biggest problem with governance in anon platforms is 1 identity = 1 vote.
+
+But then all you really introduce is money = vote, like steemit...and issues with things like FOSS/blockchain governance.
+
+To deal with this, you could send a series of say 5 collision resistant random captchas per user (that must be solved in a certain amount of time)
+and if the user completes the test they are considered a "present valid identity". 
+x
+so bob creates a thread, and the vote on that thread is will occur at a specific time (@+2d 12:00PM EST, so minimum timelapse: 24:01hrs,
+could be longer if desired) each person can send their vote in advance and will recieve like an app-popup when to solve captchas which confirms vote tx queue on that given day)
+
+so long as everyone in the network takes 1 minute out of their day to cast a vote the network basically operates in a manner where
+sybil attacks are impossible (the captcha test is suffiently long enough + complex enough that it can't be automated).
+
+Users get x votes on project, with y limit per topic. Setting limit to 1 would probably be safest. 
+
+Speaking about governance, you could for example have a git repo of sorts that allows PR/commit based on votes. You vote on PRs (EIPs), 
+if > 60% approved (or w/e number you want to use for consensus), it clears. If you set the timespan min to 7 days, you have at least week to review any commit. You avoid flooding the repo with PRs via capcha test as well (and x votes). Require each commit to have a certain amount of present votes required. You could also require submission of request to be a specific amount of capcha signed votes. 
+
+to scale it you would just create 1 service that sends 1 capcha test that iterates through all projects who have an interest in using this voting schema the user is engaged in.
+
+bob has an account on a smart contract, contains list of projects which contains references to vote-pr 
+service sends bob capcha sign test, he passes 5 capchas within 1 minute. 
+update is sent to all projects with success of test passing, his vote is counted across all projects he participates on
+
