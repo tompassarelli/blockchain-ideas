@@ -7,7 +7,7 @@ But then all you really introduce is money = vote, like steemit...and issues wit
 
 To deal with this, you could send a series of say 5 collision resistant random captchas per user (that must be solved in a certain amount of time)
 and if the user completes the test they are considered a "present valid identity". 
-x
+
 so bob creates a thread, and the vote on that thread is will occur at a specific time (@+2d 12:00PM EST, so minimum timelapse: 24:01hrs,
 could be longer if desired) each person can send their vote in advance and will recieve like an app-popup when to solve captchas which confirms vote tx queue on that given day)
 
